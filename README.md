@@ -1,14 +1,14 @@
-# 校比比（Xiaobibi）
+# 童路近邻 · tonglu
 
-校比比是面向深圳市宝安区小学信息查询的项目，帮助用户按地址或小区查看学校基础信息、地图位置和招生资料。项目展示内容以公开资料整理为基础，仅作信息参考，不构成招生资格或录取承诺。
+童路近邻是面向深圳市宝安区小学信息查询的项目，帮助用户按地址或小区查看学校基础信息、地图位置和招生资料。项目展示内容以公开资料整理为基础，仅作信息参考，不构成招生资格或录取承诺。
 
-本仓库维护校比比官网静态页面和部署配置。
+本仓库维护童路近邻官网静态页面和部署配置。
 
 ## 入口
 
-- 官网：[xiaobibi.21ido.com](https://xiaobibi.21ido.com/)
-- API 仓库：[think2cat/xiaobibi_api](https://github.com/think2cat/xiaobibi_api)
-- 小程序仓库：[think2cat/xiaobibi_mp](https://github.com/think2cat/xiaobibi_mp)
+- 官网：[tonglu.21ido.com](https://tonglu.21ido.com/)
+- API 仓库：[think2cat/tonglu_api](https://github.com/think2cat/tonglu_api)
+- 小程序仓库：[think2cat/tonglu_mp](https://github.com/think2cat/tonglu_mp)
 
 ### 小程序码
 
@@ -17,7 +17,7 @@
 ## 部署文件
 
 - `web/index.html`：官网页面
-- `deploy/nginx-xiaobibi.conf`：Nginx 站点配置
+- `deploy/nginx-tonglu.conf`：Nginx 站点配置
 - `deploy/README.md`：部署与验证说明
 
 ## 版本历史
@@ -31,4 +31,4 @@
 
 ## 说明
 
-官网当前只提供静态建设中页面，`/api/` 暂时返回 404。后端接口实现、数据库和学校数据服务将在 API 仓库中独立维护。
+官网当前只提供静态建设中页面，学校数据 API 由 `tonglu_api` 仓库独立维护。
