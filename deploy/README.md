@@ -1,5 +1,25 @@
 # Web 页面部署
 
-将 `web/index.html` 安装到 `/var/www/xiaobibi/index.html`，并按 `tonglu.21ido.com` 的 TLS 证书路径使用 `nginx-tonglu.conf` 配置站点。API 服务在本机 `127.0.0.1:3000` 运行，由 `/api/` 反向代理提供访问。
+将 `web/` 内全部内容（`index.html` 与 `assets/`）安装到 `/var/www/xiaobibi/`。站点为纯静态页面，无需 Node 进程或构建步骤。已有 TLS 与 Nginx 配置沿用，API 服务在本机 `127.0.0.1:3000` 运行，由 `/api/` 反向代理提供访问。
 
-部署后验证 `https://tonglu.21ido.com/` 返回页面、`https://tonglu.21ido.com/api/health` 返回 `status=ok`。后端服务代码和数据库维护在 `tonglu_api` 仓库。
+## 更新现有站点
+
+1. 通过 OpenSSH 登录服务器，确认实际生效站点根目录是 `/var/www/xiaobibi`。不要盲目覆盖正在使用的 Nginx 配置。
+2. 部署前将现有站点目录打包到 `/opt/xiaobibi-api/backups/`，文件名包含日期与时间。
+3. 本地将 `web/` 内文件打包，通过 SCP 上传到 `/tmp/`，在临时目录解压并检查文件。
+4. 先安装 `assets/`，再将新 HTML 写入临时文件，最后用同目录 `mv` 替换 `index.html`，避免读到半写入的首页。文件权限 644、目录权限 755。
+5. 不删除站点其他文件（例如微信验证文件），不修改 API 服务、数据库、证书、Nginx 代理规则。本次无需重启或重载服务。
+6. 若需回滚，将对应旧站点备份解压回原根目录。新页面专用的额外资源文件可保留，不影响旧页面。
+
+资源 URL 带版本参数；以后更改 CSS/JS 时同步调整 HTML 引用的版本号，避免旧缓存。
+
+## 验证
+
+- `https://tonglu.21ido.com/` 返回新首页，标题为「童路近邻 · 深圳学校查询助手」。
+- `/assets/site.css`、`/assets/site.js` 和两个 SVG 均返回正确内容类型及 200。
+- `https://tonglu.21ido.com/api/health` 返回 `status=ok`，原小程序接口继续工作。
+- 320、390、768、1024、1440 px 宽度下没有横向溢出，图片完整显示。
+- 地图标记与列表同步；范围示意可切换；全部小程序入口按钮可打开弹窗；复制名称、关闭按钮、Escape 与焦点恢复正常；FAQ 可展开。
+- 浏览器控制台无错误，官网不发送学校或地图 API 请求。
+
+2026-11-13 本地已通过以上五种宽度的浏览器检查。后端服务代码和数据库维护在 `tonglu_api` 仓库。

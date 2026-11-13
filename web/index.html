@@ -3,11 +3,75 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="童路近邻正在建设中">
-  <title>童路近邻 · 建设中</title>
-  <style>
-    :root{font-family:system-ui,-apple-system,"Microsoft YaHei",sans-serif;color:#172033;background:#f4f7fb}*{box-sizing:border-box}body{margin:0;min-height:100vh;display:grid;place-items:center;padding:24px}.panel{width:min(680px,100%);background:#fff;border:1px solid #dce3ee;border-radius:16px;padding:clamp(32px,8vw,72px);box-shadow:0 18px 50px #17203314}.mark{display:inline-block;padding:6px 10px;border-radius:7px;background:#eaf1ff;color:#2563eb;font-size:13px;font-weight:700;letter-spacing:.08em}.logo{font-size:clamp(34px,8vw,56px);line-height:1.1;margin:22px 0 14px;letter-spacing:0}.text{font-size:18px;line-height:1.8;color:#536176;margin:0}.meta{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}.meta span{padding:8px 12px;border:1px solid #dce3ee;border-radius:8px;color:#667085;font-size:13px}
-</style>
+  <meta name="theme-color" content="#164e40">
+  <meta name="description" content="童路近邻，深圳家长的学校查询助手。在微信小程序搜索小区、道路或门牌，查看地图范围内的学校、招生范围参考与学校资料。">
+  <meta property="og:title" content="童路近邻 · 让身边的学校，更清楚一点">
+  <meta property="og:description" content="从一个地址出发，了解身边的学校。深圳学校查询、地图联动与招生范围参考。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://tonglu.21ido.com/">
+  <link rel="canonical" href="https://tonglu.21ido.com/">
+  <link rel="icon" type="image/svg+xml" href="/assets/brand.svg">
+  <link rel="stylesheet" href="/assets/site.css?v=20261113">
+  <script src="/assets/site.js?v=20261113" defer></script>
+  <title>童路近邻 · 深圳学校查询助手</title>
 </head>
-<body><main class="panel"><span class="mark">TONGLU</span><h1 class="logo">童路近邻</h1><p class="text">正在建设中，学校信息、地图查询和数据服务即将上线。</p><div class="meta"><span>宝安区小学</span><span>数据持续整理</span><span>仅作信息参考</span></div></main></body>
+<body>
+  <a class="skip-link" href="#main">跳到主要内容</a>
+  <header class="site-header"><div class="container header-inner">
+    <a class="brand" href="#" aria-label="童路近邻首页"><img src="/assets/brand.svg" width="38" height="38" alt=""><span>童路近邻<small>TONGLU · SHENZHEN</small></span></a>
+    <nav aria-label="主导航"><a href="#features">功能介绍</a><a href="#guide">使用指南</a><a href="#faq">常见问题</a></nav>
+    <button class="button button-small button-dark" data-open-wechat>前往小程序 <span aria-hidden="true">↗</span></button>
+  </div></header>
+  <main id="main">
+    <section class="hero container" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="status-dot"></span> 给深圳家长的学校查询助手</div>
+        <h1 id="hero-title">离家近一点，<br>了解<span class="highlight">多一点。</span></h1>
+        <p class="hero-description">从一个地址出发，看看身边有哪些学校。<br class="desktop-break">位置、学校资料与招生范围参考，一起了解。</p>
+        <div class="hero-actions"><button class="button button-dark" data-open-wechat><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M14.5 15.5c4.1 0 7.5-2.8 7.5-6.2S18.6 3 14.5 3 7 5.8 7 9.3c0 1.1.3 2.2 1 3.1l-1 3.1 3.4-1.2c1.2.8 2.6 1.2 4.1 1.2Z"/><path d="M6 8C3 8.7 1 11 1 13.6c0 1.4.6 2.7 1.6 3.7L2 20l3-1c1 .5 2.2.8 3.4.8 3 0 5.6-1.5 6.8-3.5"/><path d="M12 8h.01M17 8h.01"/></svg> 在微信中使用 <span aria-hidden="true">↗</span></button><a class="text-link" href="#explore">先了解怎么用 <span aria-hidden="true">↓</span></a></div>
+        <div class="hero-footnote"><span class="mini-mark">小</span> 微信搜索「童路近邻」<span class="separator">/</span> 无需单独下载 App</div>
+      </div>
+      <div class="product-scene" id="explore">
+        <div class="scene-topline"><span><i class="status-dot"></i> 看见身边的学校</span><span class="preview-label">功能示意 · 非实时数据</span></div>
+        <div class="product-preview">
+          <div class="preview-search"><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg><span>从您居住的小区开始</span><span class="search-city">深圳</span></div>
+          <div class="preview-map" aria-label="学校与住所位置示意图，不代表真实地理位置">
+            <img src="/assets/neighborhood.svg" alt="" class="map-art" width="600" height="350">
+            <span class="map-area-label">生活的半径，也有成长的可能</span><div class="scope-shape" aria-hidden="true"></div>
+            <span class="map-road road-one">邻里大道</span><span class="map-road road-two">成长路</span>
+            <button class="school-pin pin-a is-selected" data-school="a" aria-label="查看示例学校 A" aria-pressed="true">A</button>
+            <button class="school-pin pin-b" data-school="b" aria-label="查看示例学校 B" aria-pressed="false">B</button>
+            <button class="school-pin pin-c" data-school="c" aria-label="查看示例学校 C" aria-pressed="false">C</button>
+            <div class="home-pin"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m4 11 8-7 8 7v9H4Z"/><path d="M9 20v-7h6v7"/></svg><span>所选地址</span></div>
+            <div class="map-legend"><span></span> 学校位置 <i></i> 所选地址</div>
+          </div>
+          <div class="preview-schools">
+            <div class="preview-list-heading"><strong>地图范围内学校 <span>3 所</span></strong><span>位置与列表联动</span></div>
+            <button class="demo-school is-selected" data-school="a" aria-pressed="true"><span class="school-letter">A</span><span class="demo-school-main"><strong><em>公办</em> 示例学校 A</strong><small class="demo-status" data-default="查看学校资料">查看学校资料</small></span><span class="demo-detail">详情 <b>↗</b></span></button>
+            <button class="demo-school" data-school="b" aria-pressed="false"><span class="school-letter">B</span><span class="demo-school-main"><strong><em>公办</em> 示例学校 B</strong><small class="demo-status" data-default="了解学校与招生信息">了解学校与招生信息</small></span><span class="demo-detail">详情 <b>↗</b></span></button>
+            <button class="demo-school" data-school="c" aria-pressed="false"><span class="school-letter">C</span><span class="demo-school-main"><strong><em class="private">民办</em> 示例学校 C</strong><small class="demo-status" data-default="查看地址与公开资料">查看地址与公开资料</small></span><span class="demo-detail">详情 <b>↗</b></span></button>
+          </div>
+        </div>
+        <div class="demo-controls" role="group" aria-label="切换功能演示"><button class="is-active" data-demo="nearby" aria-pressed="true">附近学校</button><button data-demo="scope" aria-pressed="false">范围标记</button><span>点击地图标记试试 <span aria-hidden="true">↖</span></span></div>
+        <p class="demo-caption" id="demo-caption" aria-live="polite">地图标记与学校列表同步选中。真实查询请前往小程序。</p>
+      </div>
+    </section>
+    <div class="container overview"><div><span class="overview-label">从位置到资料</span><strong>让查学校，有条理</strong></div><div><b>01</b><span>搜索一个地址<small>小区 · 道路 · 门牌</small></span></div><div><b>02</b><span>看看周边学校<small>地图与列表同步</small></span></div><div><b>03</b><span>了解更多信息<small>学校资料 · 范围参考</small></span></div></div>
+    <section class="section container" id="features" aria-labelledby="features-title">
+      <div class="section-heading"><div><p class="eyebrow">为每一次认真了解而设计</p><h2 id="features-title">关于学校，<br class="mobile-break">少一点来回查找。</h2></div><p>把分散的信息整理在一起，<br>把更多时间留给判断与选择。</p></div>
+      <div class="feature-grid">
+        <article class="feature-card feature-map"><div class="feature-icon" aria-hidden="true">⌕</div><h3>从地址找到周边学校</h3><p>输入小区、道路或门牌，查看地图范围内的学校。拖动地图，列表随之更新；点击标记，快速找到对应学校。</p><div class="address-chip"><span aria-hidden="true">⌕</span> 小区、道路或门牌 <span>↵</span></div><div class="micro-tags"><span>本地最近搜索</span><span>模糊定位</span><span>地图联动</span></div><span class="feature-index">01 / 发现</span></article>
+        <article class="feature-card feature-scope"><div class="feature-icon" aria-hidden="true">◎</div><h3>招生范围，看得更明白</h3><p>对已支持区域，根据所选地址匹配招生范围。明确命中与待核实结果分开展示，点开标记可查看判定依据。</p><div class="scope-samples"><span><i class="red-dot"></i> 命中范围参考</span><span><i class="amber-dot"></i> 范围待核实</span></div><p class="feature-note">范围命中不等于具备报名资格，未标红也不代表不能报名。</p><span class="feature-index">02 / 了解</span></article>
+        <article class="feature-card feature-info"><div class="feature-icon" aria-hidden="true">▤</div><h3>资料有来源，也能纠错</h3><p>了解学校地址、办学性质、学校介绍与已收录的招生资料。发现内容有误，可在详情页上报，帮助信息持续完善。</p><div class="info-samples"><span>学校介绍 <b>↗</b></span><span>公开资料 <b>↗</b></span><span>上报错误 <b>↗</b></span></div><span class="feature-index">03 / 核实</span></article>
+      </div>
+    </section>
+    <section class="coverage-section" aria-labelledby="coverage-title"><div class="container coverage-inner"><div><p class="eyebrow">有边界的信息，更值得参考</p><h2 id="coverage-title">附近的学校，<br>与可申请的学校，<br><span>一起看，分清楚。</span></h2></div><div class="coverage-content"><p>附近学校按地图可见范围展示，招生范围匹配只做额外标记。即使没有匹配结果，也能继续了解周边学校。</p><div class="coverage-row"><span class="coverage-number">01</span><div><h3>学校查询 · 深圳</h3><p>展示平台已收录且有坐标的学校。实际收录数量与更新信息，可在小程序内查看。</p></div></div><div class="coverage-row"><span class="coverage-number">02</span><div><h3>范围参考 · 宝安 / 龙华</h3><p>宝安已提供范围查询，龙华范围功能随新版小程序提供。各区数据完整程度不同，请以小程序展示及当年官方公告为准。</p></div></div><div class="coverage-tip"><span aria-hidden="true">ⓘ</span><p>童路近邻是信息查询工具，不是官方招生平台。范围参考不替代户籍、住房、积分等申请条件的核验。</p></div></div></div></section>
+    <section class="section container guide-section" id="guide" aria-labelledby="guide-title"><div class="section-heading"><div><p class="eyebrow">不复杂，从这里开始</p><h2 id="guide-title">三步，了解家门口的学校。</h2></div><button class="text-link" data-open-wechat>打开使用指引 <span aria-hidden="true">↗</span></button></div><div class="steps"><article><span class="step-number">1</span><h3>微信找到「童路近邻」</h3><p>在微信搜索名称，进入小程序。也可以使用模糊定位，从当前位置附近开始查看。</p></article><article><span class="step-number">2</span><h3>搜索并选择您的地址</h3><p>输入小区、道路或门牌，从候选地址中选中准确位置，地图会显示周边学校。</p></article><article><span class="step-number">3</span><h3>查看学校，核实范围</h3><p>点击学校查看资料，点击范围标记了解依据。重要报名信息，请向学校或主管部门核实。</p></article></div></section>
+    <section class="section container faq-section" id="faq" aria-labelledby="faq-title"><div class="faq-intro"><p class="eyebrow">您可能想了解</p><h2 id="faq-title">常见问题</h2><p>查找之前，<br>先把这几件事说明白。</p></div><div class="faq-list"><details open><summary>官网可以直接搜索学校吗？<span aria-hidden="true">+</span></summary><p>目前官网用于介绍功能和使用方式，真实学校查询在微信小程序「童路近邻」中进行。上方地图为交互示意，不连接学校数据接口。</p></details><details><summary>学校标红，就一定能报名吗？<span aria-hidden="true">+</span></summary><p>不是。标红表示所选地址命中了当前数据中可明确判断的招生范围，不代表满足户籍、住房、积分、学位等全部条件，也不构成录取承诺。请核实对应年度的官方招生公告。</p></details><details><summary>为什么附近有学校，却没有范围标记？<span aria-hidden="true">+</span></summary><p>地图附近学校与招生范围是两种信息。未支持的区域、尚未完整解析的规则、待核实边界或未能关联学校的记录，都可能没有明确标记。未标红不代表不能申请。</p></details><details><summary>定位不够准确，应该怎么办？<span aria-hidden="true">+</span></summary><p>小程序使用模糊定位，适合大致了解附近学校。需要查询某个住所时，建议搜索具体小区或门牌并核对候选地址；招生范围边界附近仍需进一步核实。</p></details><details><summary>学校资料有误，或想提建议，在哪里反馈？<span aria-hidden="true">+</span></summary><p>在学校详情页点击「上报错误」，填写错误描述，联系方式可选。对产品的建议，可从首页「学校数据更新」弹窗进入「意见建议」。反馈将交由后台审核处理。</p></details></div></section>
+    <section class="container start-section"><div class="start-decoration" aria-hidden="true">↗</div><div><p class="eyebrow">每一段成长，都从身边开始</p><h2>下一站，<br class="mobile-break">认识家附近的学校。</h2><p>打开微信，搜索「童路近邻」。</p></div><button class="button button-white" data-open-wechat>开始了解 <span aria-hidden="true">↗</span></button></section>
+  </main>
+  <footer class="container site-footer"><div class="footer-top"><a class="brand" href="#"><img src="/assets/brand.svg" width="32" height="32" alt=""><span>童路近邻<small>让身边的学校，更清楚一点</small></span></a><span>深圳学校查询助手</span></div><div class="footer-bottom"><p>© 2026 童路近邻 · 信息持续整理，以学校及主管部门公布为准。</p><a href="#faq">使用说明 <span aria-hidden="true">↗</span></a></div></footer>
+  <dialog id="wechat-dialog" aria-labelledby="wechat-title" aria-describedby="wechat-description"><button class="dialog-close" aria-label="关闭使用指引">×</button><img src="/assets/brand.svg" width="58" height="58" alt=""><p class="eyebrow">在微信，遇见童路近邻</p><h2 id="wechat-title">查学校，从这里开始。</h2><p id="wechat-description">打开微信，搜索下方名称，<br>在「小程序」分类中找到我们。</p><div class="copy-name">童路近邻<button id="copy-name">复制名称</button></div><ol class="dialog-steps"><li>打开微信顶部的搜索入口</li><li>搜索「童路近邻」，选择「小程序」</li><li>进入小程序，搜索您想了解的地址</li></ol><p id="copy-status" role="status">如未能复制，可长按或选中名称手动复制。</p></dialog>
+  <noscript><div class="noscript-note">请在微信搜索「童路近邻」使用小程序。页面交互演示需启用 JavaScript。</div></noscript>
+</body>
 </html>
