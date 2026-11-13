@@ -16,7 +16,7 @@
 ## 验证
 
 - `https://tonglu.21ido.com/` 返回新首页，标题为「童路近邻 · 深圳学校查询助手」。
-- `/assets/site.css`、`/assets/site.js` 和两个 SVG 均返回正确内容类型及 200。
+- `/assets/site.css`、`/assets/site.js` 、LOGO、小程序码、favicon 和地图 SVG 均返回正确内容类型及 200。
 - `https://tonglu.21ido.com/api/health` 返回 `status=ok`，原小程序接口继续工作。
 - 320、390、768、1024、1440 px 宽度下没有横向溢出，图片完整显示。
 - 地图标记与列表同步；范围示意可切换；全部小程序入口按钮可打开弹窗；复制名称、关闭按钮、Escape 与焦点恢复正常；FAQ 可展开。

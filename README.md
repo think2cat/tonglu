@@ -12,7 +12,7 @@
 
 ### 小程序码
 
-正式小程序码尚未纳入仓库。当前官网通过弹窗引导用户在微信搜索「童路近邻」，支持主动点击复制名称；不使用伪造二维码或未经配置的微信跳转链接。取得正式小程序码后可加入 `web/assets/` 并更新弹窗。
+官网已接入用户提供的正式小程序码与 LOGO。所有小程序入口打开扫码弹窗，支持保存原始小程序码、微信扫一扫及名称复制搜索。小程序码原图不裁剪、不重绘；手机浏览器下载行为因平台而异，也可长按图片保存。
 
 ## 官网功能
 
@@ -21,7 +21,7 @@
 - 功能说明：地址搜索、地图联动、本地最近搜索、模糊定位、学校资料、上报错误与意见建议。
 - 招生范围说明：区分周边学校与范围命中；宝安已提供查询，龙华随新版小程序提供，以实际发布状态为准。
 - 使用指引弹窗、名称复制、原生折叠 FAQ、键盘操作、焦点恢复和减少动态效果支持。
-- 基础 SEO：标题、描述、canonical、Open Graph 和 SVG 图标。
+- 基础 SEO：标题、描述、canonical、Open Graph 和品牌图标。
 
 官网不请求学校 API，不加载完整学校数据，也不请求地图服务。演示中 A/B/C 学校及地图均为明确标注的功能示意，不是真实地址或招生判断。页面不包含统计 SDK、Cookie 或后台密钥；仅用户点击复制按钮时写入剪贴板，不读取剪贴板。
 
@@ -34,7 +34,9 @@
 - `web/index.html`：官网页面
 - `web/assets/site.css`：响应式样式
 - `web/assets/site.js`：功能示意、微信指引与复制交互
-- `web/assets/brand.svg`、`web/assets/neighborhood.svg`：原创矢量视觉素材
+- `web/assets/logo.png`、`web/assets/favicon.png`：正式 LOGO 与由其缩小生成的浏览器图标
+- `web/assets/miniprogram-code.png`：正式小程序码原图
+- `web/assets/neighborhood.svg`：原创地图示意素材
 - `deploy/nginx-tonglu.conf`：Nginx 站点配置
 - `deploy/README.md`：部署与验证说明
 
